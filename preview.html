@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landbrugsskolen – Øveside</title>
+  <style>
+    :root {
+      --green: #2f6b3f;
+      --light-green: #e8f3e9;
+      --brown: #8a5a2b;
+      --cream: #fffaf0;
+      --dark: #1f2933;
+      --white: #ffffff;
+      --yellow: #fef3c7;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; }
+    header { background: linear-gradient(135deg, #2f6b3f, #6aa96f); color: white; padding: 3rem 1rem; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { max-width: 780px; margin: 1rem auto 0; font-size: 1.1rem; }
+    .hero-image { max-width: 760px; margin: 2rem auto 0; background: rgba(255,255,255,0.18); border-radius: 24px; padding: 1rem; }
+    svg { width: 100%; height: auto; display: block; }
+    nav { background: var(--white); padding: 1rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.7rem; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    nav a { color: var(--green); text-decoration: none; font-weight: bold; padding: 0.5rem 0.8rem; border-radius: 999px; background: var(--light-green); }
+    main { max-width: 1100px; margin: auto; padding: 2rem 1rem; }
+    section { background: var(--white); margin-bottom: 2rem; padding: 1.5rem; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+    h2 { color: var(--green); margin-top: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .card { background: var(--light-green); padding: 1rem; border-radius: 14px; border-left: 6px solid var(--green); }
+    .card h3 { margin-top: 0; color: var(--green); }
+    .card svg, .wide-image svg { margin-bottom: 0.8rem; border-radius: 12px; }
+    .wide-image { background: #f8fafc; border-radius: 16px; padding: 1rem; margin: 1rem 0; border: 1px solid #e5e7eb; }
+    .info-box { background: var(--yellow); border-left: 6px solid #d97706; padding: 1rem; border-radius: 12px; margin: 1rem 0; }
+    .quiz-question { margin: 1.3rem 0; padding: 1rem; border: 1px solid #d1d5db; border-radius: 12px; background: #fafafa; }
+    button { background: var(--green); color: white; border: none; padding: 0.7rem 1rem; border-radius: 10px; cursor: pointer; font-weight: bold; margin-top: 0.8rem; }
+    button:hover { background: #255431; }
+    .feedback { margin-top: 0.7rem; font-weight: bold; }
+    textarea { width: 100%; min-height: 110px; padding: 0.8rem; border-radius: 10px; border: 1px solid #cbd5e1; font-family: inherit; resize: vertical; }
+    .reflection { background: #eef6ff; border-left: 6px solid #2563eb; padding: 1rem; border-radius: 14px; margin-bottom: 1rem; }
+    footer { text-align: center; padding: 2rem 1rem; background: var(--green); color: white; margin-top: 2rem; }
+    .badge { display: inline-block; background: var(--brown); color: white; padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    @media print { nav, button, footer { display: none; } section { box-shadow: none; border: 1px solid #ccc; } }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🌱 Landbrugsskolen – øveside</h1>
+  <p>Læs korte faglige oplysninger, test din viden og reflekter over arbejdet med dyr, planter, maskiner, sikkerhed og bæredygtighed.</p>
+  <div class="hero-image" aria-label="Illustration af gård, mark, traktor og dyr">
+    <svg viewBox="0 0 900 320" role="img">
+      <rect width="900" height="320" fill="#bfe3ff"/><circle cx="760" cy="70" r="38" fill="#ffd166"/>
+      <path d="M0 220 C140 170 250 250 390 205 C560 150 680 220 900 165 L900 320 L0 320 Z" fill="#7dbb68"/>
+      <path d="M0 255 C160 230 330 270 500 235 C650 205 760 250 900 225 L900 320 L0 320 Z" fill="#4f8f5b"/>
+      <rect x="95" y="135" width="150" height="95" fill="#f4a261"/><polygon points="80,140 170,75 260,140" fill="#8a3f2d"/>
+      <rect x="148" y="175" width="42" height="55" fill="#5b341f"/><rect x="205" y="95" width="35" height="45" fill="#b45309"/>
+      <circle cx="575" cy="230" r="35" fill="#1f2937"/><circle cx="690" cy="230" r="45" fill="#1f2937"/>
+      <rect x="545" y="165" width="145" height="55" rx="10" fill="#e63946"/><rect x="610" y="130" width="70" height="45" rx="8" fill="#ef4444"/>
+      <rect x="625" y="138" width="32" height="24" fill="#dbeafe"/><circle cx="575" cy="230" r="18" fill="#f3f4f6"/><circle cx="690" cy="230" r="23" fill="#f3f4f6"/>
+      <ellipse cx="350" cy="238" rx="45" ry="25" fill="#ffffff"/><circle cx="312" cy="225" r="18" fill="#ffffff"/><circle cx="305" cy="221" r="4" fill="#111827"/>
+      <path d="M330 260 L320 285 M360 260 L370 285" stroke="#111827" stroke-width="5"/>
+      <path d="M397 237 Q425 220 440 240" stroke="#ffffff" stroke-width="10" fill="none"/>
+      <text x="450" y="65" font-size="34" fill="#2f6b3f" font-weight="bold">Landbrug i praksis</text>
+    </svg>
+  </div>
+</header>
+<nav><a href="#viden">Faglig viden</a><a href="#quiz">Quiz</a><a href="#case">Cases</a><a href="#refleksion">Refleksion</a><a href="#ord">Fagord</a></nav>
+<main>
+<section id="viden">
+  <h2>1. Faglig viden</h2>
+  <div class="grid">
+    <div class="card"><svg viewBox="0 0 300 150"><rect width="300" height="150" fill="#c7e9ff"/><rect y="95" width="300" height="55" fill="#7dbb68"/><ellipse cx="150" cy="92" rx="70" ry="35" fill="#fff"/><circle cx="85" cy="82" r="25" fill="#fff"/><circle cx="78" cy="78" r="4" fill="#111"/><circle cx="135" cy="85" r="13" fill="#111"/><circle cx="175" cy="105" r="16" fill="#111"/><path d="M115 120 L105 145 M145 122 L143 145 M180 122 L190 145" stroke="#111" stroke-width="6"/></svg><span class="badge">Dyr</span><h3>Dyrevelfærd</h3><p>Dyrevelfærd handler om, at dyr skal have adgang til foder, vand, passende plads, mulighed for naturlig adfærd og beskyttelse mod smerte, sygdom og stress.</p></div>
+    <div class="card"><svg viewBox="0 0 300 150"><rect width="300" height="150" fill="#e0f2fe"/><rect y="100" width="300" height="50" fill="#8a5a2b"/><path d="M60 105 C65 70 95 65 100 40 C110 75 130 75 135 105" fill="#2f6b3f"/><path d="M150 105 C158 68 190 62 195 35 C205 72 225 75 230 105" fill="#3f8f50"/><circle cx="245" cy="38" r="22" fill="#ffd166"/></svg><span class="badge">Planter</span><h3>Planteproduktion</h3><p>Planter har brug for lys, vand, næringsstoffer og passende jordbund. Landmanden skal vurdere jordens tilstand, vejret og afgrødens behov.</p></div>
+    <div class="card"><svg viewBox="0 0 300 150"><rect width="300" height="150" fill="#dbeafe"/><rect y="105" width="300" height="45" fill="#94a3b8"/><circle cx="95" cy="105" r="28" fill="#111827"/><circle cx="190" cy="105" r="38" fill="#111827"/><rect x="75" y="60" width="120" height="40" rx="8" fill="#e63946"/><rect x="125" y="30" width="55" height="38" rx="7" fill="#ef4444"/><rect x="136" y="38" width="25" height="20" fill="#bfdbfe"/><circle cx="95" cy="105" r="12" fill="#f8fafc"/><circle cx="190" cy="105" r="17" fill="#f8fafc"/><polygon points="235,35 270,105 200,105" fill="#facc15"/><text x="224" y="91" font-size="45" font-weight="bold" fill="#111827">!</text></svg><span class="badge">Maskiner</span><h3>Sikkerhed</h3><p>Ved arbejde med maskiner er det vigtigt at bruge korrekt udstyr, kende maskinens funktioner og aldrig fjerne sikkerhedsafskærmning.</p></div>
+    <div class="card"><svg viewBox="0 0 300 150"><rect width="300" height="150" fill="#ecfccb"/><circle cx="150" cy="78" r="48" fill="none" stroke="#2f6b3f" stroke-width="10"/><path d="M188 52 L218 48 L204 75" fill="#2f6b3f"/><path d="M112 104 L82 108 L96 82" fill="#2f6b3f"/><path d="M150 42 C138 62 125 72 126 92 C127 113 145 120 150 121 C155 120 173 113 174 92 C175 72 162 62 150 42Z" fill="#65a30d"/></svg><span class="badge">Miljø</span><h3>Bæredygtighed</h3><p>Bæredygtigt landbrug handler om at producere fødevarer med omtanke for klima, jord, vandmiljø, dyrevelfærd og økonomi.</p></div>
+  </div>
+  <div class="info-box"><strong>Husk:</strong> Godt landbrug kræver både praktisk håndværk, faglig viden og evnen til at vurdere situationer i hverdagen.</div>
+</section>
+<section id="quiz">
+  <h2>2. Quiz – test din viden</h2>
+  <div class="quiz-question"><p><strong>1. Hvad er et vigtigt tegn på god dyrevelfærd?</strong></p><label><input type="radio" name="q1" value="a"> At dyrene altid står stille</label><br><label><input type="radio" name="q1" value="b"> At dyrene har adgang til foder, vand og passende plads</label><br><label><input type="radio" name="q1" value="c"> At dyrene aldrig kommer udenfor</label><br><button onclick="checkAnswer('q1','b','fb1')">Tjek svar</button><div id="fb1" class="feedback"></div></div>
+  <div class="quiz-question"><p><strong>2. Hvorfor er jordbund vigtig i planteproduktion?</strong></p><label><input type="radio" name="q2" value="a"> Fordi jorden påvirker vand, næring og planternes vækst</label><br><label><input type="radio" name="q2" value="b"> Fordi jorden kun betyder noget for farven på planten</label><br><label><input type="radio" name="q2" value="c"> Fordi planter ikke har brug for næring</label><br><button onclick="checkAnswer('q2','a','fb2')">Tjek svar</button><div id="fb2" class="feedback"></div></div>
+  <div class="quiz-question"><p><strong>3. Hvad bør du gøre før du bruger en ukendt maskine?</strong></p><label><input type="radio" name="q3" value="a"> Bare prøve dig frem</label><br><label><input type="radio" name="q3" value="b"> Fjerne sikkerhedsafskærmningen</label><br><label><input type="radio" name="q3" value="c"> Få instruktion og læse sikkerhedsanvisninger</label><br><button onclick="checkAnswer('q3','c','fb3')">Tjek svar</button><div id="fb3" class="feedback"></div></div>
+</section>
+<section id="case">
+  <h2>3. Cases fra praksis</h2>
+  <div class="wide-image"><svg viewBox="0 0 900 220"><rect width="900" height="220" fill="#fef3c7"/><rect y="150" width="900" height="70" fill="#c08457"/><rect x="40" y="40" width="250" height="110" fill="#a16207" opacity="0.45"/><rect x="325" y="40" width="250" height="110" fill="#a16207" opacity="0.45"/><rect x="610" y="40" width="250" height="110" fill="#a16207" opacity="0.45"/><ellipse cx="190" cy="145" rx="55" ry="30" fill="#fff"/><circle cx="140" cy="132" r="22" fill="#fff"/><circle cx="132" cy="128" r="4" fill="#111"/><ellipse cx="490" cy="145" rx="58" ry="32" fill="#fff"/><circle cx="438" cy="132" r="22" fill="#fff"/><circle cx="431" cy="128" r="4" fill="#111"/><circle cx="730" cy="92" r="18" fill="#f59e0b"/><rect x="715" y="110" width="30" height="55" rx="10" fill="#2563eb"/><path d="M715 126 L680 145 M745 126 L780 145" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/><path d="M722 165 L710 205 M738 165 L755 205" stroke="#111827" stroke-width="8" stroke-linecap="round"/><text x="40" y="30" font-size="24" fill="#2f6b3f" font-weight="bold">Observation i stalden</text></svg></div>
+  <div class="reflection"><h3>Case 1: Koen virker urolig</h3><p>Du kommer ind i stalden og ser, at en ko går meget rundt, spiser mindre end normalt og virker urolig.</p><p><strong>Spørgsmål:</strong> Hvilke observationer vil du gøre? Hvem vil du kontakte? Hvad kan være mulige forklaringer?</p><textarea placeholder="Skriv dine tanker her..."></textarea></div>
+  <div class="reflection"><h3>Case 2: Maskinen larmer anderledes</h3><p>Du skal bruge en maskine, men opdager, at den lyder anderledes end normalt.</p><p><strong>Spørgsmål:</strong> Hvad gør du først? Hvorfor kan det være farligt bare at fortsætte arbejdet?</p><textarea placeholder="Skriv dine tanker her..."></textarea></div>
+  <div class="reflection"><h3>Case 3: Tør jord og svage planter</h3><p>En mark har tør jord, og planterne ser svage ud. Vejrudsigten lover ikke regn de næste dage.</p><p><strong>Spørgsmål:</strong> Hvilke faglige overvejelser skal landmanden gøre sig?</p><textarea placeholder="Skriv dine tanker her..."></textarea></div>
+</section>
+<section id="refleksion">
+  <h2>4. Refleksionsspørgsmål</h2>
+  <ol><li>Hvad kendetegner en ansvarlig landmand?</li><li>Hvordan kan man opdage, at et dyr ikke trives?</li><li>Hvorfor er sikkerhed vigtigt, også når man har travlt?</li><li>Hvordan kan landbruget både producere fødevarer og tage hensyn til miljøet?</li><li>Hvilke situationer kræver, at du spørger en erfaren kollega eller underviser?</li></ol>
+</section>
+<section id="ord">
+  <h2>5. Fagord du skal kende</h2>
+  <div class="grid"><div class="card"><h3>Dyrevelfærd</h3><p>At dyr trives fysisk og psykisk og får opfyldt deres behov.</p></div><div class="card"><h3>Jordbund</h3><p>Den type jord, planter vokser i. Jordbund påvirker vand, næring og vækst.</p></div><div class="card"><h3>Næringsstoffer</h3><p>Stoffer som planter og dyr har brug for for at vokse og fungere.</p></div><div class="card"><h3>Sikkerhedsafskærmning</h3><p>Beskyttelse på maskiner, som mindsker risikoen for ulykker.</p></div><div class="card"><h3>Bæredygtighed</h3><p>At bruge ressourcer ansvarligt, så fremtidige generationer også har muligheder.</p></div><div class="card"><h3>Observation</h3><p>At lægge mærke til tegn, ændringer og detaljer i en situation.</p></div></div>
+</section>
+</main>
+<footer><p>Øveside til landbrugsskolen – kan bruges individuelt, i makkerpar eller som fælles klasseaktivitet.</p></footer>
+<script>
+function checkAnswer(questionName, correctAnswer, feedbackId) {
+  const selected = document.querySelector('input[name="' + questionName + '"]:checked');
+  const feedback = document.getElementById(feedbackId);
+  if (!selected) { feedback.textContent = 'Vælg et svar først.'; feedback.style.color = '#b45309'; return; }
+  if (selected.value === correctAnswer) { feedback.textContent = 'Korrekt! Godt arbejde.'; feedback.style.color = '#15803d'; }
+  else { feedback.textContent = 'Ikke helt. Prøv igen og læs spørgsmålet grundigt.'; feedback.style.color = '#b91c1c'; }
+}
+</script>
+</body>
+</html>
